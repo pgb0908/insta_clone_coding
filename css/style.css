@@ -113,6 +113,10 @@ body{
     border-bottom: 1px solid rgba(0,0,0,1 );
 }
 
+#header.on{
+    position: fixed;
+}
+
 /*높이값은 자식에게*/
 #header .inner{
     width: 975px;
@@ -121,6 +125,11 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition:all 1s;  /*환면전환*/
+}
+
+#header.on .inner {
+    height: 52px;
 }
 
 #header .inner .logo .incon_insta_logo {
@@ -153,6 +162,14 @@ position: relative;
     transform: translateX(25px);
 }
 
+#header.on .inner .logo div:nth-child(2){
+    opacity: 0;
+    transition:all 0.5s;
+}
+#header.on .inner .logo .incon_insta_logo:after{
+    opacity: 0;
+    transition:all 0.5s;
+}
 
 #header .search_box{
     position: relative;
@@ -352,6 +369,11 @@ position: relative;
     position: absolute;
     right: 0;
     top: 0;
+}
+
+.side_box.on{
+    position: fixed;
+    top:80px;
 }
 
 .side_box .profile_thumb{
