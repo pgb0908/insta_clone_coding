@@ -269,6 +269,10 @@ position: relative;
     padding-right: 20px;
 }
 
+.heart_button.on .sprite_heart_icon_outline {
+    background: url("../imgs/background01.png") no-repeat -26px -261px;
+}
+
 .contents .bottom_icons .left_icons{
     display: flex;
 }
