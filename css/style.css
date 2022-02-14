@@ -1,4 +1,4 @@
-
+/*http://www.spritecow.com/*/
 .incon_insta_logo {
     display: inline-block;  /*세로로 늘어*/
     background: url('../imgs/background01.png') no-repeat -53px -235px;
@@ -113,6 +113,7 @@ body{
     border-bottom: 1px solid rgba(0,0,0,1 );
 }
 
+/*높이값은 자식에게*/
 #header .inner{
     width: 975px;
     height: 77px;
@@ -212,8 +213,7 @@ position: relative;
 
 #main_container .inner{
     width: 935px;
-/*    height: 500px;
-    background: red;*/
+    position: relative;
 }
 
 .contents_box{
@@ -339,4 +339,90 @@ position: relative;
     cursor: pointer;
     pointer-events: none;
     opacity: 0.6;
+}
+
+.side_box{
+    width: 293px;
+/*    height: 300px;
+    background: #e58383;*/
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.side_box .profile_thumb{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.side_box .profile_thumb img{
+    width: 100%;
+    height: 100%;
+}
+
+.side_box .user_profile {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #262626;
+}
+
+.side_box .detail .id {
+  margin-bottom: 5px;
+}
+
+.side_box .detail .ko_name {
+    font-size: 12px;
+    color: #999999;
+}
+
+.side_box > article{
+    border: 1px solid rgba(0,0,0, 0.09);
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: 291px;
+    font-size: 14px;
+    color: #262626;
+    font-weight: bold;
+    background: white;
+}
+
+.side_box > article > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    color: #999999;
+}
+
+.side_box > article > header  .more {
+    font-size: 12px;
+    color: #262626;
+    cursor: pointer;
+}
+
+.thumb_user {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.thumb_user .profile_thumb {
+    width: 34px;
+    height: 34px;
+}
+
+.thumb_user .time {
+    font-size: 10px;
+    letter-spacing: 0.2px;
+    color: #999999;
+}
+
+.side_box .scroll_inner {
+    height: 182px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }

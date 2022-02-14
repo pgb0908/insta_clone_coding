@@ -1,6 +1,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
+   부러유조건 default 값이 상이하기 때문에 이를 초기화하는 것이 필요
 */
 
 html, body, div, span, applet, object, iframe,
