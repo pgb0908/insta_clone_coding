@@ -83,6 +83,13 @@
     height: 24px;
 }
 
+.sprite_bookmark_outline.on {
+    display: inline-block;
+    background: url('../imgs/background01.png') no-repeat -159px -286px;
+    width: 19px;
+    height: 24px;
+}
+
 .sprite_small_heart_icon_outline {
     display: inline-block;
     background: url('../imgs/background01.png') no-repeat -323px -274px;
@@ -286,7 +293,7 @@ position: relative;
     padding-right: 20px;
 }
 
-.heart_button.on .sprite_heart_icon_outline {
+.sprite_heart_icon_outline.on {
     background: url("../imgs/background01.png") no-repeat -26px -261px;
 }
 
