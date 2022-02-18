@@ -3,6 +3,7 @@ const header = document.querySelector('#header');
 const sideBox = document.querySelector('.side_box');
 const variableWidths = document.querySelectorAll('.contents_box .contents');
 const delegation = document.querySelector('.contents_box');
+const hiddenMenu = document.querySelector('.hidden_menu');
 
 
 function delegationFunc(e) {
@@ -153,7 +154,11 @@ function resizeFunc(){
 }
 
 function scrollFunc(){
-    console.log(pageYOffset);
+    let scrollHeight = pageYOffset + window.innerHeight;
+    let documentHeight = document.body.scrollHeight;
+
+    //console.log('scrollHeight : ' + scrollHeight);
+    //console.log('documentHeight : ' + documentHeight);
 
     if(pageYOffset >= 10){
         header.classList.add('on');
@@ -171,6 +176,42 @@ function scrollFunc(){
             sideBox.removeAttribute('style');
         }
     }
+
+    if(scrollHeight >= documentHeight){
+        let page = document.querySelector('#page').value;
+        document.querySelector('#page').value = parseInt(page)+1;
+
+        console.log('page : ' + page);
+        callMorePostAjax(page);
+
+
+    }
+}
+
+function callMorePostAjax(page){
+
+    if(page >5) {
+        return;
+    }
+
+    $.ajax({
+        type:'POST',
+        url:'./post.html',
+        data:{
+            'page':page,
+        },
+        dataType:'html',
+        success:addMorePostAjax,
+        error:function (request, status, error){
+            alert('문제가 발생했습니다.');
+            window.location.replace('https://www.naver.com');
+        }
+
+    })
+}
+
+function addMorePostAjax(data){
+    delegation.insertAdjacentHTML('beforeend', data);
 }
 
 setTimeout(function (){

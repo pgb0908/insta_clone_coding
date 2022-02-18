@@ -504,6 +504,11 @@ position: relative;
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.09);
     border-radius: 3px;
+    display: none;
+}
+
+.hidden_menu.on{
+    position: fixed;
 }
 
 .hidden_menu .scroll_inner {
@@ -563,6 +568,10 @@ position: relative;
 
     .side_box {
         display: none;
+    }
+
+    .hidden_menu {
+        display: block;
     }
 }
 
