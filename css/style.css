@@ -276,6 +276,34 @@ position: relative;
     display: flex;
 }
 
+.contents .sprite_more_icon{
+    position: relative;
+}
+
+.contents .sprite_more_icon.on .toggle_box{
+    display: block;
+}
+
+.contents .toggle_box{
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top:20px;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    border-radius: 3px;
+    display: none;
+}
+
+.contents .toggle_box > li {
+    padding: 5px 10px;
+    background: #fafafa;
+}
+
+.contents .toggle_box > li > input {
+    border:none;
+    font-size: inherit;
+}
+
 .contents .img_section {
     overflow: hidden;
 }
@@ -324,7 +352,12 @@ position: relative;
 
 .contents .comment_container .comment{
     display: flex;
+    flex-direction: column;
     font-size: 14px;
+}
+
+.contents .comment_container .comment-detail{
+    display: flex;
 }
 
 .contents .comment_container .comment .nick_name{
@@ -365,7 +398,7 @@ position: relative;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    pointer-events: none;
+/*    pointer-events: none;*/
     opacity: 0.6;
 }
 
